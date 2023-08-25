@@ -13,6 +13,13 @@ app.get("/", logger, (req, res) => {
   return res.json({ name: "aa" });
 });
 
+app.get("/chatflows/:id", (req, res) => {
+  console.log(req.params.id);
+  console.log(req.headers);
+  return res.json({ name: "aa" });
+})
+
+
 app.post("/chatflows", (req, res) => {
   console.log("保存成功");
   console.log(req.body);
