@@ -12,7 +12,6 @@ app.use(express.urlencoded({ limit: "50mb", extended: false }));
 app.use(logger)
 app.use("/user", userRouter);
 app.use("/book", bookRouter);
-// app.get("/**/*", logger);
 
 app.get("/chatflows/:id", (req, res) => {
   console.log(req.params.id);
